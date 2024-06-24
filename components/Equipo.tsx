@@ -1,18 +1,25 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 interface EquipoProps {
   nombre: string;
 }
 
 const Equipo: React.FC<EquipoProps> = ({ nombre }) => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.equipoContainer}>
       <Image source={require('../assets/images/football.png')} style={styles.image} />
       <Text style={styles.nombre}>{nombre}</Text>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Ver más</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Ver más"
+          color="#0066cc"
+          //onPress={() => navigation.navigate('VerEquipo')}
+        />
+      </View>
     </View>
   );
 };
@@ -21,6 +28,15 @@ const styles = StyleSheet.create({
   equipoContainer: {
     alignItems: 'center',
     margin: 10,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    padding: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 5,
+    width: 100, // Ajusta según tus necesidades
   },
   image: {
     width: 50,
@@ -29,16 +45,11 @@ const styles = StyleSheet.create({
   nombre: {
     fontSize: 16,
     marginVertical: 4,
+    textAlign: 'center',
   },
-  button: {
-    backgroundColor: '#0066cc',
-    paddingVertical: 5,
-    paddingHorizontal: 10,
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: 'white',
-    fontWeight: 'bold',
+  buttonContainer: {
+    marginTop: 10,
+    borderRadius: 20
   },
 });
 

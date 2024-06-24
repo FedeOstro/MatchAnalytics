@@ -1,9 +1,20 @@
 import React from 'react';
-import { StyleSheet, ScrollView, View, Text, StatusBar, Image } from 'react-native';
+import { StyleSheet, ScrollView, View, Text, StatusBar, Image, Button } from 'react-native';
 import Equipo from '@/components/Equipo';
 import Partido from '@/components/Partido';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+//import verEquipo from '../../components/navigation/verEquipo.tsx'
+import { useNavigation } from 'expo-router';
+//const Stack = NavigationContainer();
 
-export default function App() {
+
+
+const app = () => {
+  const navigationHook = useNavigation();
+  const pasarAquipo = () => {
+  //navigationHook.navigate('verEquipo')
+  };
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
@@ -20,7 +31,9 @@ export default function App() {
           <Equipo nombre="Equipo 3" />
         </View>
         <View style={styles.addButton}>
-          <Text style={styles.addText}>Añadir Nuevo</Text>
+          <Button
+          title='Añadir Nuevo'
+          />
         </View>
         
         <Text style={styles.sectionTitle}>Partidos</Text>
@@ -30,12 +43,16 @@ export default function App() {
           <Partido numero="3" fecha="12/2" puntos="92-80" equipos="Equipo 2 vs Dep.Puerrreydon" />
         </View>
         <View style={styles.addButton}>
-          <Text style={styles.addText}>Anotar</Text>
+          <Button 
+            title="Anotar"
+          />
         </View>
       </ScrollView>
     </View>
   );
-}
+}  
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -90,3 +107,5 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
+
+export default app
