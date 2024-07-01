@@ -16,8 +16,6 @@ const Equipo: React.FC<EquipoProps> = ({ nombre }) => {
       <View style={styles.buttonContainer}>
         <Button
           title="Ver más"
-          color="#0066cc"
-          //onPress={() => navigation.navigate('VerEquipo')}
         />
       </View>
     </View>
@@ -49,7 +47,6 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginTop: 10,
-    borderRadius: 20
   },
 });
 

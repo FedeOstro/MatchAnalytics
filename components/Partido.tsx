@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 interface PartidoProps {
@@ -23,10 +23,15 @@ const Partido: React.FC<PartidoProps> = ({ numero, fecha, puntos, equipos }) => 
         <Text style={styles.puntosText}>Puntos: {puntos}</Text>
         <Text style={styles.equiposText}>{equipos}</Text>
       </View>
+      <View>
+      <TouchableOpacity style={styles.button}>
+        <Image source={require('../assets/images/flechaderecha.png')} style={styles.image} />
+        </TouchableOpacity> 
+      </View>
     </View>
   );
 };
-//onPress={() => navigation.navigate('VerPartido')}
+
 const styles = StyleSheet.create({
   partidoContainer: {
     flexDirection: 'row',
@@ -68,7 +73,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   button: {
-    backgroundColor: '#0066cc',
+    backgroundColor: '#2E98FA',
     padding: 10,
     borderRadius: 5,
   },
@@ -77,6 +82,10 @@ const styles = StyleSheet.create({
     height: 20,
     tintColor: 'white',
   },
+  image:{
+    width: 20,
+    height: 20
+  }
 });
 
 export default Partido;
