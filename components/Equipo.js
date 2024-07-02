@@ -2,11 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-interface EquipoProps {
-  nombre: string;
-}
-
-const Equipo: React.FC<EquipoProps> = ({ nombre }) => {
+const Equipo = ({ nombre }) => {
   const navigation = useNavigation();
 
   return (

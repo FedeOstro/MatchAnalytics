@@ -1,6 +1,6 @@
 import app from "@/app/(tabs)"
 
-const App = () => {
+function App ({navigation}) {
 
 }
 

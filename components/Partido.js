@@ -2,14 +2,8 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-interface PartidoProps {
-  numero: string;
-  fecha: string;
-  puntos: string;
-  equipos: string;
-}
 
-const Partido: React.FC<PartidoProps> = ({ numero, fecha, puntos, equipos }) => {
+const Partido = ({ numero, fecha, puntos, equipos }) => {
   const navigation = useNavigation();
 
   return (

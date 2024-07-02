@@ -13,5 +13,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+, "components/navigation/crearPartido..js", "components/navigation/crearEquipo.js", "components/navigation/anotPartido.js", "components/navigation/allEquipos.js", "components/navigation/login.js", "components/navigation/statsJugador.js", "components/navigation/statsJugadorxPartido.js", "components/navigation/statsPartido.js", "components/navigation/TabBarIcon.js", "components/navigation/verPartido.js", "components/navigation/verEquipo.js", "components/Equipo.js", "components/Collapsible.js", "components/Partido.js", "components/__tests__/ThemedText-test.js", "app/(tabs)/index.js", "app/_layout.js", "app/+html.js", "app/+not-found.js"  ]
 }

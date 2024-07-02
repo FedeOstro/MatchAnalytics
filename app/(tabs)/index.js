@@ -7,14 +7,13 @@ import verEquipo from '../../components/navigation/verEquipo'
 
 const Stack = createNativeStackNavigator();
 
-const MyStack = () => {
+function MyStack () {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen 
           name="Home"
           component={homeScreen}
-          options={{title: 'Welcome'}}
         />
         <Stack.Screen 
           name="verEquipo" 

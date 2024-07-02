@@ -6,7 +6,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const homeScreen = (navigation) => {
+function homeScreen ({navigation}) {
   return (
       <View style={styles.container}>
         <StatusBar barStyle="dark-content" />
